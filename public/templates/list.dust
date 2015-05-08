@@ -1,0 +1,16 @@
+{>"layouts/master" /}
+
+{<body}
+<div class="col-xs-6 col-xs-offset-3">
+  <h2 class="text-center">Bài viết</h2>
+  {#posts}
+  	<div>
+		<h4><a href="#">{title}</a></h4>
+		<p>{description}</p>
+		<a href="/post/edit/{_id}" class="btn btn-info">Sửa</a> 
+		<a href="/post/delete/{_id}" class="btn btn-danger">Xóa</a>
+	</div>
+	<hr>
+  {/posts}
+  </div>
+{/body}

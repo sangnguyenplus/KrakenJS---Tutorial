@@ -1,0 +1,5 @@
+{>"layouts/master" /}
+
+{<body}
+    <h1>{say} from controller index</h1>
+{/body}
