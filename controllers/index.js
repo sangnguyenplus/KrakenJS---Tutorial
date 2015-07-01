@@ -4,8 +4,11 @@
 var IndexModel = require('../models/index');
 var PostModel = require('../models/post');
 
+var auth = require('./auth');
+
 
 module.exports = function (router) {
+    auth(router);
 
     var model = new IndexModel();
 

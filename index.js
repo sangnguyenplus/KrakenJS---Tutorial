@@ -3,6 +3,7 @@
 var express = require('express');
 var kraken = require('kraken-js');
 
+
 var db = require('./library/database');
 
 
@@ -46,6 +47,13 @@ app.use(lusca({
     hsts: {maxAge: 31536000, includeSubDomains: true, preload: true},
     xssProtection: true
 }));
+
+
+var passport = require('passport');
+var flash    = require('connect-flash');
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 
 app.on('start', function () {
     console.log('Application ready to serve requests.');
